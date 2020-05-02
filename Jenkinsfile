@@ -15,7 +15,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                	app = docker.build("docker tag firstimage raghavkjdocker/selenium-docker")
+                	app = docker.build("--tag firstimage && raghavkjdocker/selenium-docker")
                 }
             }
         }
